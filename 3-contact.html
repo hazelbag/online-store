@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!--Link to internal CSS sheet-->
+  <link rel="stylesheet" type="text/css" href="css\myStyles.css">
+  <!--Imported font Awesome to use Sign Up and Login icons-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <!-- Link to jQuery script-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <title>Capstone Project</title>
+</head>
+<!--Body has been set to a light background to match the navbar-->
+
+<body class="bg-light">
+  <!--Navbar is fixed and set to light background-->
+  <nav class="navbar navbar fixed-top navbar-expand-lg navbar-light alert-primary">
+    <div class="container">
+      <!--Navbar collapse when opened on mobile/tablet device-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--Navbar created with UL-->
+      <div id="navb" class="navbar-collapse collapse hide">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="1-index.html">Home</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="2-product-page.html">Products</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="3-contact.html">Contact Us</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="4-cart.html"><span class="fas fa-shopping-cart"></span> Cart</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <div class="jumbotron jumbotron-fluid text-dark text-center" id="headingID">
+    <div class="container">
+      <h1 class="display-1" id="header">Mountain Bikers</h1>
+    </div>
+  </div>
+  <!--Shipping Info-->
+  <div class="container mt-5" id="shippingInfo">
+    <h3 class="display-4" id="shippingHeading">Please see below Shipping Info</h3>
+    <table class="table-hover mt-5" id="deliveryTable">
+      <tr>
+        <th style="text-align: center">Delivery Type</th>
+        <th style="text-align: center">Items</th>
+      </tr>
+      <tr>
+        <th><strong>Click & Collect</strong></th>
+        <td>Free</td>
+      </tr>
+      <tr>
+        <th><strong>Standard</strong></th>
+        <td>R499</td>
+      </tr>
+      <tr>
+        <th><strong>Next Day</strong></th>
+        <td>R799</td>
+      </tr>
+      <tr>
+        <th><strong>Weekend</strong></th>
+        <td>R999</td>
+      </tr>
+    </table>
+  </div>
+  <div class="container mt-5" id="shippingDetailed">
+    <p><strong>Click and Collect Orders</strong></p>
+    <p>If ordered by no later than 15h00 you can collect the item the same day. Payments for click and collect will be
+      processed in store only and no online payments allowed.</p>
+    <br>
+    <p><strong>Standard Delivery</strong></p>
+    <p>Standard delivery times vary depeniding on location, outlaying areas can be from 3 - 5 days and major centres
+      from 2 - 3 days. Payments are to reflect and if paying into our bank account proof of paymemt is to be emailed to
+      us.</p>
+    <br>
+    <p><strong>Next Day Delivery</strong></p>
+    <p>If you place an order, selected next day delivery and pay using our secure payment channel before 12h00 (12pm)
+      your order will be dispatched for delivery the next day. This option is only available from <em>Monday to
+        Thursday</em>.
+    </p>
+    <br>
+    <p><strong>Weekend Delivery</strong></p>
+    <p>Weekend deliveries are availble. Orders needs to be placed the before 10h00 for weekend deliveries. Your item
+      will be delivered over the weekend between 13h00 and 14h00. This option is not available to outlaying areas.</p>
+  </div>
+  <!--Contact Section-->
+  <div id="contactForm">
+    <section id="contact-us">
+      <div class="container mt-5">
+        <h3 class="display-4" id="contact-us-heading">For more info contact us:</h3>
+        <br>
+      </div>
+    </section>
+    <br>
+    <!--Contact form, details required on all but message-->
+    <section class="contact-form mb-4" id="contact">
+      <form>
+        <div class="container">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Name & Surname</label>
+              <input type="text" class="form-control" id="inputDetails" placeholder="Name & Surname" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label>Email Address</label>
+              <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea class="form-control" rows="5" id="message" name="text"
+                placeholder="Enter Your Message Here"></textarea>
+            </div>
+            <!--Radio button added to opt in or not to newsletter-->
+            <p>Tick below either yes or no to subscribe and stay up to date with events:</p>
+            <div class="form-check-inline">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optradio">Yes</label>
+            </div>
+            <div class="form-check-inline">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optradio">No</label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-outline-dark">Submit</button>
+        </div>
+      </form>
+      <br>
+    </section>
+  </div>
+  <br>
+  <div id="footer-section">
+    <footer>
+      <div class="jumbotron alert-primary text-center mt-5 ">
+        <p id="footer">Website created &amp; maintained by &copy; <a href="https://github.com/hazelbag"
+            target="_blank">Jacques Olivier</a>. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

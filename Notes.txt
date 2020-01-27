@@ -1,0 +1,12 @@
+Hey Tav
+
+Here is the notes page I mentioned.
+
+Currently as on the product page you will see there is prices linked from the js file to the items on the product html page.
+However, on the html file 5 - marlin you will see that the price indicates as per the js but the pages after that the price does not write to the innerHTML section, why would this be?
+
+Then with regards to said, if you click the add to cart buttons, how will I get these items to write to the cart file(shipping option can be done via a drop down I believe on the cart page?), I am having
+difficulty with this section of the task. (Please ignore no styling for now please, I need to do styling still)
+
+Regards,
+Jacques

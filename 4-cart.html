@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--Link to internal CSS sheet-->
+    <link rel="stylesheet" type="text/css" href="css\myStyles.css">
+    <!--Imported font Awesome to use icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- Link to jQuery script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <title>Capstone Project</title>
+</head>
+<!--Body has been set to a light background to match the navbar-->
+
+<body class="bg-light">
+    <!--Navbar is fixed and set to light background-->
+    <nav class="navbar navbar fixed-top navbar-expand-lg navbar-light alert-primary">
+        <div class="container">
+            <!--Navbar collapse when opened on mobile/tablet device-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--Navbar created with UL-->
+            <div id="navb" class="navbar-collapse collapse hide">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="1-index.html">Home</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="2-product-page.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="3-contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="4-cart.html"><span class="fas fa-shopping-cart"></span> Cart</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <div class="jumbotron jumbotron-fluid text-dark text-center" id="headingID">
+        <div class="container">
+            <h1 class="display-1" id="header">Mountain Bikers</h1>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <h2 class="display-4">Cart Contents</h2>
+        <br>
+        <thead class="tableHeading">
+            <div class="cart-total"><span id="cartCount"></span></div>
+            <table id="cartSection">
+            </table>
+        </thead>
+
+        <br>
+        <div class="cart-total">
+            <h1 id="error"></h1>
+            <input type="text" onchange="check()" required id="coup" placeholder="Enter Coupon Code Here">
+            <div class="shippingCost"><span id="chosenShipping"></span></div>
+            <div class="cart-total-title"><span id="total-cart"></span></div>
+        </div>
+        <br>
+        <div style="float:right">
+            <button class="btn btn-danger" onclick="clearContent()" id="clear-cart">Clear Cart</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="container" id="orderSubmit">
+        <div class="row">
+            <div class="col-75">
+                <form>
+                    <div class="row">
+                        <div class="col-50">
+                            <h3>Billing Address</h3>
+                            <label for="fname">Full Name</label>
+                            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email" placeholder="john@example.com">
+                            <label for="adr">Address</label>
+                            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                            <label for="city"> City</label>
+                            <input type="text" id="city" name="city" placeholder="Cape Town">
+
+                            <div class="row">
+                                <div class="col-50">
+                                    <label for="state">Province</label>
+                                    <input type="text" id="state" name="state" placeholder="WC">
+                                </div>
+                                <div class="col-50">
+                                    <label for="zip">Postal Code</label>
+                                    <input type="text" id="zip" name="zip" placeholder="8000">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-50">
+                            <h3>Payment</h3>
+                            <label for="fname">Accepted Cards</label>
+                            <div class="icon-container">
+                                <i class="fab fa-cc-visa" style="color:navy;"></i>
+                                <i class="fab fa-cc-amex" style="color:blue;"></i>
+                                <i class="fab fa-cc-mastercard" style="color:red;"></i>
+                                <i class="fab fa-cc-discover" style="color:orange;"></i>
+                            </div>
+                            <label for="cname">Name on Card</label>
+                            <input type="text" id="cname" name="cardname" placeholder="John More Doe" required>
+                            <label for="ccnum">Credit card number</label>
+                            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                            <label for="expmonth">Exp Month</label>
+                            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                            <div class="row">
+                                <div class="col-50">
+                                    <label for="expyear">Exp Year</label>
+                                    <input type="text" id="expyear" name="expyear" placeholder="2018">
+                                </div>
+                                <div class="col-50">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" name="cvv" placeholder="352">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <label>
+                        <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                    </label>
+                    <button onclick="submitOrder()" class="btn1">Submit Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="footer-section">
+        <footer>
+            <div class="jumbotron alert-primary text-center mt-5 ">
+                <p id="footer">Website created &amp; maintained by &copy; <a href="https://github.com/hazelbag"
+                        target="_blank">Jacques Olivier</a>. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <!-- Optional JavaScript -->
+    <script type='text/javascript' src="js\2-cartScript.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
